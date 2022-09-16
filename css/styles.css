@@ -639,7 +639,11 @@ body {
   margin-left: 93px;
 }
 
-.subscribe input {
+.subscribe-box {
+  display: flex;
+}
+
+.subscribe-box input {
   width: 358px;
   height: 50px;
   
@@ -650,7 +654,7 @@ body {
   border-radius: 4px;
 }
 
-.subscribe input::placeholder {
+.subscribe-box input::placeholder {
   padding-left: 16px;
   
   font-size: 16px;
@@ -670,37 +674,34 @@ body {
   position: relative;
   margin-left: 12px;
   padding: 0;
-  width: 200px;
-  height: 50px;
   
-  color: var(--primary-white-color);
   background-color: var(--accent-color);
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.06em;
 
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: none;
 }
 
-.subscribe-text-btn {
-  padding: 0;
-  margin-right: 10px;
+.subscribe-btn-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
+  padding: 10px 28px;
+
+  fill: var(--primary-white-color);
+  color: var(--primary-white-color);
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
+  letter-spacing: 0.06em;
 }
 
-.subscribe-icon {
-  
-  position: absolute;
-  top: 13px;
-  right: 18px;
+.subscribe-text-btn {
+  width: 110px;
 
-  fill: var(--primary-white-color);
-
+  margin-right: 10px;
+  padding: 0;0
 }
 
 /* portfolio */
@@ -822,48 +823,156 @@ body {
   top: 50%;
   left: 50%;
 
-  width: 528px;
-  height: 581px;
+  min-width: 528px;
+  min-height: 581px;
 
   background-color: var(--primary-white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   
-  transform: translate(-50%, -50%) scale(0.9);
+  transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms var(--transition-cubic);
 }
 
 .modal-form {
-  display: flex;
-  flex-direction: column;
-  padding-right: 40px;
-  padding-left: 40px;
+  padding: 40px;
 }
 
 .modal-form h2 {
-  margin-top: 40px;
+  margin-top: 0;
   margin-bottom: 12px;
 
   font-weight: 700;
   font-size: 20px;
-  line-height: 23px;
+  line-height: 1.15;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
 }
 
-.modal-form input {
-  width: 448px;
+.form-field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+
+}
+
+.form-field input {
+  width: 100%;
   height: 40px;
+  margin: 0;
+  padding: 12px 42px 12px 42px;
+  
+  font-size: 14px;
+  line-height: 1.71;
+  color: var(--text-color);
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 }
 
-.modal-form .comment {
-  height: 120px;
+.modal-form-icon {
+  position: absolute;
+  bottom: 11px;
+  left: 12px;
 }
+
+.form-label {
+  margin-bottom: 4px;
+  padding: 0;
+  
+  font-size: 12px;
+  line-height: 1.67;
+  letter-spacing: 0.01em;
+}
+
+.form-field .form-textarea {
+  padding: 12px 16px;
+  width: 100%;
+  height: 120px;
+  resize: none;
+
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.form-check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.form-checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.check-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 14px;
+  line-height: 1.71;
+}
+
+.check-label a {
+  color: var(--accent-color);
+}
+
+.checkbox-icon {
+  display: inline-block;
+  margin-right: 8.38px;
+  width: 15px;
+  height: 16px;
+  border: 2px solid var(--title-text-color);
+  border-radius: 3px;
+}
+
+.form-checkbox:checked + .checkbox-icon {
+  background-color: var(--accent-color);
+  background-image: url("../images/icon-check.svg");
+  background-size: contain;
+  background-origin: border-box;
+  border: none;
+}
+
+.modal-form .form-btn {
+  padding: 10px 52px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  font-family: inherit;
+  background-color: #2196F3;
+  color: var(--primary-white-color);
+  
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  border: none;
+  border-radius: 4px;
+}
+
 
 .close {
   display: inline-flex;
@@ -884,4 +993,10 @@ body {
   background-repeat: no-repeat;
   justify-content: center;
   align-items: center;
+
+  transition: fill 250ms var(--transition-cubic);
+}
+
+.close:hover {
+  fill: var(--accent-color);
 }
