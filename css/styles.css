@@ -883,8 +883,9 @@ body {
   transition: fill 250ms var(--transition-cubic);
 }
 
-.form-input:focus-within {
-  border: 1px solid var(--accent-color);
+.form-input:focus-within,
+.form-textarea:focus-within {
+  outline: 1px solid var(--accent-color);
 }
 
 .form-input:focus + .modal-form-icon {
@@ -912,6 +913,8 @@ body {
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  transition: outline 250ms var(--transition-cubic); 
 }
 
 .form-check {
