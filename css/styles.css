@@ -573,8 +573,7 @@ body {
 
 .container.footer {
   display: flex;
-  justify-content: start;
-  align-items: baseline;
+  justify-content: space-between;
 }
 
 .footer-item-logo {
@@ -617,10 +616,15 @@ body {
   text-decoration: none;
 }
 
+.page-footer .social-list {
+  padding: 0;
+}
+
 /* join in footer */
 
-.footer-join-marg {
-  margin-left: 70px;
+.join,
+.subscribe {
+  padding: 10px 0 0 0;
 }
 
 .footer-title {
@@ -642,10 +646,6 @@ body {
 }
 
 /* subscribe */
-
-.subscribe {
-  margin-left: 93px;
-}
 
 .subscribe-box {
   display: flex;
