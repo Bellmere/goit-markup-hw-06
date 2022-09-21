@@ -466,7 +466,7 @@ body {
 .item img {
   display: block;
   width: 100%;
-  max-height: 360px;
+  max-height: 260px;
   object-fit: cover;
 }
 
@@ -1063,6 +1063,20 @@ body {
     width: calc((100% - 30px) / 2);
   }
 
+  .section-hero h1 {
+    font-size: 26px;
+  }
+
+  .container.hero {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
   .title-do {
     padding: 15px 0 ;
   }
@@ -1072,19 +1086,11 @@ body {
   }
 
   .item img {
-    max-height: 350px;
+    max-height: 370px;
   }
 }
 
 @media(max-width: 767px) {
-  .section-hero h1 {
-    font-size: 24px;
-  }
-
-  .container.hero {
-    padding-top: 100px;
-    padding-bottom: 100px;
-  }
 
   .btn-hero {
     font-size: 14px;
