@@ -532,9 +532,12 @@ body {
 .clients-list {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  
 }
 
-.item-clients .icon {
+.clients-link {
   display: inline-flex;
   width: 170px;
   height: 92px;
@@ -556,12 +559,12 @@ body {
     border 250ms var(--transition-cubic);
 }
 
-.item-clients:not(:last-child) {
-  margin-right: 30px;
+.item-clients {
+  width: calc((100% - 5 * 30px) / 6);
 }
 
-.clients-link .icon:hover,
-.clients-link .icon:focus {
+.clients-link:hover,
+.clients-link:focus {
   fill: var(--accent-color);
   border: 1px solid var(--accent-color);
 }
@@ -1039,7 +1042,7 @@ body {
     width: calc((100% - 30px) / 2);
   }
   .title-do {
-    padding 15px 0 ;
+    padding: 15px 0 ;
   }
 
   .team-list .item {
