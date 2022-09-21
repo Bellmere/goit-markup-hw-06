@@ -40,7 +40,7 @@ body {
 .container {
   margin-left: auto;
   margin-right: auto;
-  width: 1200px;
+  max-width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -231,13 +231,13 @@ body {
   text-align: center;
 }
 
-.hero {
-  height: 600px;
+.container.hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 .overlay {
-  width: 1600px;
-  height: 600px;
+  max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
   background-image: linear-gradient(
@@ -247,7 +247,7 @@ body {
     ),
     url(../images/background-hero.jpg);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
 }
 
@@ -1030,4 +1030,23 @@ body {
 
 .close:hover {
   fill: var(--accent-color);
+}
+
+@media(max-width 767px) {
+  .section-hero h1 {
+    font-size: 24px;
+  }
+}
+
+@media(max-width 767px) {
+  .hero {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
+@media(max-width 767px) {
+  .btn-hero {
+    font-size: 14px;
+  } 
 }
