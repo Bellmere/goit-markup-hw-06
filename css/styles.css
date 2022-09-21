@@ -1034,21 +1034,15 @@ body {
   fill: var(--accent-color);
 }
 
-@media(max-width 767px) {
+@media(max-width: 767px) {
   .section-hero h1 {
     font-size: 24px;
   }
-}
-
-@media(max-width 767px) {
   .hero {
     padding-top: 100px;
     padding-bottom: 100px;
   }
-}
-
-@media(max-width 767px) {
   .btn-hero {
     font-size: 14px;
-  } 
+  }
 }
