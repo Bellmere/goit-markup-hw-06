@@ -531,7 +531,6 @@ body {
 
 .clients-list {
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
   gap: 30px;
   
@@ -1040,7 +1039,7 @@ body {
   }
 
   .item-clients {
-    width: calc((100% - 3 * 30px) / 3);
+    width: calc((100% - 2 * 30px) / 3);
   }
 }
 
