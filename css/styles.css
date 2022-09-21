@@ -110,12 +110,15 @@ body {
 
 .site-nav {
   display: inline-flex;
-  padding-top: 31px;
-  padding-bottom: 31px;
 }
 
 .nav {
   margin-left: 93px;
+
+}
+
+.site-nav .item-nav {
+  display: flex;
 }
 
 .site-nav .item-nav:not(:last-child) {
@@ -126,6 +129,7 @@ body {
   position: relative;
 
   padding-bottom: 32px;
+  padding-top: 32px;
 
   color: var(--title-text-color);
   font-weight: 500;
@@ -148,7 +152,7 @@ body {
 
 .item-nav .link.current::after {
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
 
   content: '';
@@ -166,6 +170,10 @@ body {
   display: inline-flex;
   margin-left: auto;
   align-items: center;
+}
+
+.contact-item {
+  display: flex;
 }
 
 .contact-icon {
